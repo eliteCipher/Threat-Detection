@@ -4,7 +4,7 @@
 
  
  This  is a library of SIGMA rules to detect attack techniques based on [MITRE ATT&CK®](https://attack.mitre.org/) framework. 
-Security teams can use this to quickly create detection rules in their SIEM environments. The TTPs are executed in the system using [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team/tree/master))
+Security teams can use this to quickly create detection rules in their SIEM environments. The TTPs are executed in the system using [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team/tree/master)
 
 ## Get started
 
