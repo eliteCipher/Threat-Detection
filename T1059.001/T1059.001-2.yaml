@@ -1,0 +1,25 @@
+title: Detect BloodHound Execution via PowerShell
+id: b5d9e7d7-3c9c-4a7a-bbdd-3a1c9cdb2e23
+status: experimental
+description: Detects execution of BloodHound via Invoke-BloodHound PowerShell function
+author: Kashif
+date: 2025-02-26
+references:
+    - https://attack.mitre.org/techniques/T1087/002/
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\powershell.exe'
+        CommandLine|contains:
+            - 'Invoke-BloodHound'
+            - 'SharpHound.ps1'
+    condition: selection
+falsepositives:
+    - Legitimate administrative use
+level: high
+tags:
+    - attack.discovery
+    - attack.t1087.002
+    - car.2019-04-002
