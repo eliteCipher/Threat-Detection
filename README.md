@@ -18,10 +18,10 @@ page to install Sigma command line interface.
 Download the SIGMA rule file from the repository
 
 #For Splunk:
-sigma convert -t splunk -p splunk_windows ./rules//bloodhound-detection.yml
+sigma convert -t splunk -p splunk_windows bloodhound-detection.yml
 
 #For Elastic:
-sigma convert -t lucene -p ecs_windows ./rules//bloodhound-detection.yml
+sigma convert -t lucene -p ecs_windows bloodhound-detection.yml
 
 
 
