@@ -3,8 +3,8 @@
 <p><img src="https://redcanary.com/wp-content/uploads/Atomic-Red-Team-Logo.png" width="150px" /></p>
 
  
- This  is a library of SIGMA rules to detect attack techniques based on MITRE ATT&CK [MITRE ATT&CK®](https://attack.mitre.org/) framework. 
-Security teams can use this to quickly create detection rules in their SIEM environments.
+ This  is a library of SIGMA rules to detect attack techniques based on [MITRE ATT&CK®](https://attack.mitre.org/) framework. 
+Security teams can use this to quickly create detection rules in their SIEM environments. The TTPs are executed in the system using [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team/tree/master)
 
 ## Get started
 
@@ -18,10 +18,10 @@ page to install Sigma command line interface.
 Download the SIGMA rule file from the repository
 
 #For Splunk:
-sigma convert -t splunk -p splunk_windows ./rules//bloodhound-detection.yml
+sigma convert -t splunk -p splunk_windows bloodhound-detection.yml
 
 #For Elastic:
-sigma convert -t lucene -p ecs_windows ./rules//bloodhound-detection.yml
+sigma convert -t lucene -p ecs_windows bloodhound-detection.yml
 
 
 
