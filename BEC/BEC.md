@@ -10,14 +10,14 @@ Let's breakdown the Emotet's mechanism to understand the threat it poses:
 ## 1. Account Manipulation
 
  - Bruteforcing Credentials: Attackers try multiple logon attempts ([Event ID 4625](https://attack.mitre.org/techniques/T1110/)) to crack user credentials.
- - Account Changes: Look for account modification events (Event IDs 4781 and 4738) indicating potential manipulation (MITRE T1098).
- - Credential Dumping: Tools like Mimikatz or ProcDump are used—or Sysmon Event ID 10 (targeting lsass.exe) is logged—to steal credentials (MITRE T1003.001).
+ - Account Changes: Look for account modification events (Event IDs 4781 and 4738) indicating potential manipulation ([MITRE T1098](https://attack.mitre.org/techniques/T1098/)).
+ - Credential Dumping: Tools like Mimikatz or ProcDump are used—or Sysmon Event ID 10 (targeting lsass.exe) is logged—to steal credentials ([MITRE T1003.001](https://attack.mitre.org/techniques/T1003/001/)).
 
 
 ## 2. Email Manipulation
   - Sending Emails: Compromised accounts are used to send malicious emails, spreading the infection.
-  - Email Collection: Attackers harvest email data (MITRE T1114-1) for further exploitation.
-  - Delegate Permission Changes: Unauthorized changes to email delegate permissions (MITRE T1098.002) are made to control email flow.
+  - Email Collection: Attackers harvest email data ([MITRE T1114-1](https://attack.mitre.org/techniques/T1114/001/) for further exploitation.
+  - Delegate Permission Changes: Unauthorized changes to email delegate permissions ([MITRE T1098.002](https://attack.mitre.org/techniques/T1098/002/)) are made to control email flow.
 
 
 ## 3. Installing Other Malware
