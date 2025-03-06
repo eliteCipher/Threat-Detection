@@ -9,7 +9,7 @@ Let's breakdown the Emotet's mechanism to understand the threat it poses:
 
 ## 1. Account Manipulation
 
- - Bruteforcing Credentials: Attackers try multiple logon attempts (Event ID 4625) to crack user credentials.
+ - Bruteforcing Credentials: Attackers try multiple logon attempts ([Event ID 4625](https://attack.mitre.org/techniques/T1110/)) to crack user credentials.
  - Account Changes: Look for account modification events (Event IDs 4781 and 4738) indicating potential manipulation (MITRE T1098).
  - Credential Dumping: Tools like Mimikatz or ProcDump are used—or Sysmon Event ID 10 (targeting lsass.exe) is logged—to steal credentials (MITRE T1003.001).
 
