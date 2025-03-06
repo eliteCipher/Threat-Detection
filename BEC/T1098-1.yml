@@ -1,0 +1,13 @@
+rule Admin_Account_Changes_Detected {
+    meta:
+        description = "Detects admin account modification events (Event IDs 4781 or 4738) indicating potential account manipulation (MITRE T1098-1)"
+        author = "Mohd Kashif"
+        date = "2025-03-06"
+        reference = "MITRE T1098-1"
+    strings:
+        $event4781 = "EventID: 4781" nocase
+        $event4738 = "EventID: 4738" nocase
+        $administrator = "Administrator" nocase
+    condition:
+        ($event4781 or $event4738) and $administrator
+}
